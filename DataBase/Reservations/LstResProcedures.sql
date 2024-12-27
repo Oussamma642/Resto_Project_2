@@ -11,7 +11,6 @@ BEGIN
     SELECT 
         u.user_id, 
         r.reservation_id, 
-        u.first_name, 
         u.last_name, 
         u.email, 
         r.reservation_date, 

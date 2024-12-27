@@ -179,8 +179,7 @@ if (isset($_SESSION['updateUserStatus']))
                         <table class="table table-striped mt-3">
                             <thead>
                                 <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
+                                    <th>Name</th>
                                     <th>Email</th>
                                     <th>Password</th>
                                     <th>Phone Number</th>
@@ -192,7 +191,6 @@ if (isset($_SESSION['updateUserStatus']))
                             <tbody>
                                 <?php foreach ($LstUsers as $usr) { ?>
                                 <tr>
-                                    <td><?= $usr['first_name'] ?></td>
                                     <td><?= $usr['last_name'] ?></td>
                                     <td><?= $usr['email'] ?></td>
                                     <td><?= $usr['password'] ?></td>
