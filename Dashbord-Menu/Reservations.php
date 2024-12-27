@@ -228,7 +228,6 @@ if (isset($_SESSION['Message'])) {
                         <table class="table table-striped table-bordered mt-3" style="margin-bottom:150px">
                             <thead>
                                 <tr>
-                                    <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
                                     <th>Reservation Date</th>
@@ -253,7 +252,6 @@ if (isset($_SESSION['Message'])) {
             }
         ?>
                                 <tr class="<?= $rowClass ?>">
-                                    <td><?= $r['first_name'] ?></td>
                                     <td><?= $r['last_name'] ?></td>
                                     <td><?= $r['email'] ?></td>
                                     <td><?= $r['reservation_date'] ?></td>

@@ -11,7 +11,6 @@ class clsAddNewReservation{
     private static function _CheckForms(){
 
         return (
-            isset($_POST['firstName']) &&
             isset($_POST['lastName']) &&
             isset($_POST['email']) &&
             isset($_POST['phoneNumber']) &&
