@@ -15,8 +15,22 @@ CREATE TABLE contacts (
 drop procedure if exists UpdateContactResponse;
 delimiter //
 
-create procedure UpdateContactResponse()
+create procedure UpdateContactResponse(
+        IN p_contact_id INT,         -- ID du contact à mettre à jour
+        IN p_admin_response TEXT,    -- Réponse de l'admin
+        IN p_status ENUM('pending', 'resolved', 'archived') -- Nouveau statut
+    )
+begin
+    -- Mise à jour de la table contacts
+    UPDATE contacts
+    SET 
+        response = p_admin_response, -- Ajout de la réponse de l'admin
+        status = p_status,           -- Mise à jour du statut
+        updated_at = CURRENT_TIMESTAMP -- Mise à jour de l'horodatage
+    WHERE 
+        contact_id = p_contact_id;   -- Filtrer par ID de contact
 
+end //
 delimiter ;
 
 -- ***************************************************************************

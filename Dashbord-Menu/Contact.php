@@ -25,8 +25,14 @@ $LstContact = clsListContacts::ListContacts();
 
 // When To answer the Contact message
 if (isset($_POST['send']))
-{
-    clsModifyContact::ModifyContact();
+{    
+    $st = clsModifyContact::ModifyContact();
+    if ($st){
+        echo "<script>alert('The message sent successfully')</script>";
+    }   
+    else{
+        echo "<script>alert('Failed to send the message')</script>";
+    }
 }
 
 ?>
@@ -190,13 +196,11 @@ if (isset($_POST['send']))
                     <div class="modal-body">
                         <form id="MessageContent" method="post">
                             <!-- Contact ID -->
-                            <!-- <input type="text" readonly name="contactId" id="contactId"> -->
-
-                            <!-- Contact ID-->
                             <div class="form-group">
                                 <label for="contactId"><b>Contact ID:</b></label>
-                                <input type="text" readonly class="form-control" id="contactId" name="id">
+                                <input type="text" readonly class="form-control" id="contactId" name="contactId">
                             </div>
+
                             <!-- User Full Name -->
                             <div class="form-group">
                                 <label for="fullname"><b>User Name:</b></label>
@@ -210,13 +214,12 @@ if (isset($_POST['send']))
                             </div>
 
                             <!-- Subject of The email -->
-
                             <div class="form-group">
                                 <label for="subject"><b>Subject</b></label>
                                 <input type="text" readonly class="form-control" id="subject" name="subject">
                             </div>
 
-                            <!-- Mssage box -->
+                            <!-- Message box -->
                             <div class="form-group">
                                 <label for=""><b>The Message:</b></label>
                                 <div id='messageBox' class="message-box p-3 border rounded bg-light mb-4">
@@ -224,40 +227,39 @@ if (isset($_POST['send']))
                                 </div>
                             </div>
 
-                            <!-- Reponse -->
-                            - <div class="form-group">
-                                <label for="tArea" class="form-label">Your
-                                    Message</label>
-                                <textarea class="form-control" name='reponse' id="tArea" rows="4"
-                                    placeholder="Write your message here...">
-                                </textarea>
+                            <!-- Response -->
+                            <div class="form-group">
+                                <label for="tArea" class="form-label">Your Message</label>
+                                <textarea class="form-control" name="reponse" id="tArea" rows="4"
+                                    placeholder="Write your message here..."></textarea>
                             </div>
+
+                            <!-- Submit -->
+                            <button type="submit" name="send" class="btn btn-primary">Send</button>
+                        </form>
+
                     </div>
-                    <!-- Submit -->
-                    <button type="submit" name="send" class="btn btn-primary">Send</button>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <script>
-    function populateForm(l) {
-        document.getElementById('contactId').value = l.contact_id
-        //document.getElementById('usrId').value = l.user_id;
-        document.getElementById('name').value = l.name;
-        document.getElementById('email').value = l.email;
-        document.getElementById('subject').value = l.subject;
-        document.getElementById('messageBox').innerHTML = l.message;
-        // Further logic to populate permissions if needed
-    }
-    </script>
+        <script>
+        function populateForm(l) {
+            document.getElementById('contactId').value = l.contact_id
+            //document.getElementById('usrId').value = l.user_id;
+            document.getElementById('name').value = l.name;
+            document.getElementById('email').value = l.email;
+            document.getElementById('subject').value = l.subject;
+            document.getElementById('messageBox').innerHTML = l.message;
+            // Further logic to populate permissions if needed
+        }
+        </script>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 </body>

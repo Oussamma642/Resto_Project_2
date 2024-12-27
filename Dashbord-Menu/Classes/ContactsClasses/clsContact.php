@@ -115,7 +115,6 @@ class clsContact
 
     public static function AddContact($name, $email, $subject, $message)
     {
-
         // Conncet with DB
         $conn = self::Connect();
         $stmt = $conn->prepare("CALL AddNewContact('$name','$email', '$subject', '$message', 'pending')");
