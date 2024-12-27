@@ -2,7 +2,14 @@
 
 include_once ("Dashbord-Menu/Classes/ReservationClasses/clsAddNewRes.php");
 
+if (isset($_POST['reserver'])){
+    clsAddNewReservation::AddNewReservation();
+    // clsAddNewReservation::Test();    
+}
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -622,15 +629,25 @@ include_once ("Dashbord-Menu/Classes/ReservationClasses/clsAddNewRes.php");
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                         <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
+                        <form method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input name="lastName" type="text" class="form-control" id="name"
+                                        <input name="firstName" type="text" class="form-control" id="firstName"
                                             placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <label for="firstName">Your First Name</label>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input name="lastName" type="text" class="form-control" id="lastName"
+                                            placeholder="Your Name">
+                                        <label for="lastName">Your Last Name</label>
+                                    </div>
+                                </div>
+
+
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input name="email" type="email" class="form-control" id="email"
@@ -638,6 +655,24 @@ include_once ("Dashbord-Menu/Classes/ReservationClasses/clsAddNewRes.php");
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="select1" name="nbrGuests">
+                                            <option value="1">People 1</option>
+                                            <option value="2">People 2</option>
+                                            <option value="3">People 3</option>
+                                            <option value="4">People 4</option>
+                                            <option value="5">People 5</option>
+                                            <option value="6">People 6</option>
+                                            <option value="7">People 7</option>
+                                            <option value="8">People 8</option>
+                                            <option value="9">People 9</option>
+                                            <option value="10">People 10</option>
+                                        </select>
+                                        <label for="select1">No Of People</label>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date" data-target-input="nearest">
                                         <input name="date" type="date" class="form-control datetimepicker-input"
@@ -653,23 +688,6 @@ include_once ("Dashbord-Menu/Classes/ReservationClasses/clsAddNewRes.php");
                                             id="time" placeholder="Time" data-target="#time"
                                             data-toggle="datetimepicker" />
                                         <label for="time">Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="select1" name="nbrGuests">
-                                            <option value="1">People 1</option>
-                                            <option value="2">People 2</option>
-                                            <option value="3">People 3</option>
-                                            <option value="4">People 4</option>
-                                            <option value="5">People 5</option>
-                                            <option value="6">People 6</option>
-                                            <option value="7">People 7</option>
-                                            <option value="8">People 8</option>
-                                            <option value="9">People 9</option>
-                                            <option value="10">People 10</option>
-                                        </select>
-                                        <label for="select1">No Of People</label>
                                     </div>
                                 </div>
 
