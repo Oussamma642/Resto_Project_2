@@ -113,4 +113,13 @@ class clsContact
         self::_SendMail($To, $fullname , $subject, trim($response), $reservation, $status, $order, $statusOrder);   
     }
 
+    public static function AddContact($name, $email, $subject, $message)
+    {
+
+        // Conncet with DB
+        $conn = self::Connect();
+        $stmt = $conn->prepare("CALL AddNewContact('$name','$email', '$subject', '$message', 'pending')");
+        return $stmt->execute();
+        
+    }
 }

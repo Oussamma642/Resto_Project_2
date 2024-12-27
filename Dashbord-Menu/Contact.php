@@ -141,7 +141,7 @@ if (isset($_POST['send']))
                     <table class="table striped" style="margin-top:100px">
                         <thead>
                             <tr>
-                                <th>FullName</th>
+                                <th>Name</th>
                                 <th>Email</th>
                                 <th>Date</th>
                                 <th>Subject</th>
@@ -156,7 +156,7 @@ if (isset($_POST['send']))
     {
         ?>
                             <tr>
-                                <td><?=$l['fullName']?></td>
+                                <td><?=$l['name']?></td>
                                 <td><?=$l['email']?></td>
                                 <td><?=$l['created_at']?></td>
                                 <td><?=$l['subject']?></td>
@@ -192,14 +192,14 @@ if (isset($_POST['send']))
                             <!-- Contact ID -->
                             <input type="hidden" name="contactId" id="contactId">
                             <!-- User ID -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="usrId"><b>User ID:</b></label>
                                 <input type="text" readonly class="form-control" id="usrId" name="id">
-                            </div>
+                            </div> -->
                             <!-- User Full Name -->
                             <div class="form-group">
-                                <label for="fullname"><b>User FullName:</b></label>
-                                <input type="text" readonly class="form-control" id="fullname" name="fullname">
+                                <label for="fullname"><b>User Name:</b></label>
+                                <input type="text" readonly class="form-control" id="name" name="name">
                             </div>
 
                             <!-- User Email -->
@@ -244,8 +244,8 @@ if (isset($_POST['send']))
     <script>
     function populateForm(l) {
         document.getElementById('contactId').value = l.contact_id
-        document.getElementById('usrId').value = l.user_id;
-        document.getElementById('fullname').value = l.fullName;
+        //document.getElementById('usrId').value = l.user_id;
+        document.getElementById('name').value = l.name;
         document.getElementById('email').value = l.email;
         document.getElementById('subject').value = l.subject;
         document.getElementById('messageBox').innerHTML = l.message;
