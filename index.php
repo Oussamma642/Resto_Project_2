@@ -71,21 +71,21 @@ if (isset($_POST['reserver'])){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <a href="/" class="nav-item nav-link active">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="service.php" class="nav-item nav-link">Service</a>
+                        <a href="menu.php" class="nav-item nav-link">Menu</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="booking.php" class="dropdown-item">Booking</a>
+                                <a href="team.php" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+                    <a href="#BookTab" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
             </nav>
 
@@ -97,7 +97,7 @@ if (isset($_POST['reserver'])){
                             <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita.
                                 Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                                 sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A
+                            <a href="#BookTab" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A
                                 Table</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -114,7 +114,7 @@ if (isset($_POST['reserver'])){
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
@@ -123,7 +123,7 @@ if (isset($_POST['reserver'])){
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
@@ -132,16 +132,7 @@ if (isset($_POST['reserver'])){
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-headset text-primary mb-4"></i>
@@ -626,7 +617,7 @@ if (isset($_POST['reserver'])){
                     </div>
                 </div>
                 <div class="col-md-6 bg-dark d-flex align-items-center">
-                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="BookTab" class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                         <h1 class="text-white mb-4">Book A Table Online</h1>
                         <form method="post">
@@ -862,18 +853,16 @@ if (isset($_POST['reserver'])){
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="contact.php">Contact Us</a>
+                        <a class="btn btn-link" href="boooking.php">Reservation</a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Marrakech, Morocco</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+212596985</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -882,23 +871,12 @@ if (isset($_POST['reserver'])){
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
                         <h5 class="text-light fw-normal">Monday - Saturday</h5>
                         <p>09AM - 09PM</p>
                         <h5 class="text-light fw-normal">Sunday</h5>
                         <p>10AM - 08PM</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter
-                        </h4>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
-                                placeholder="Your email">
-                            <button type="button"
-                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -906,12 +884,9 @@ if (isset($_POST['reserver'])){
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="#">OWFS-202</a>
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com"
-                                target="_blank">ThemeWagon</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
