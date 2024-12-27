@@ -8,7 +8,7 @@ class clsModifyContact
     {
         if (
             isset($_POST['contactId']) &&
-            isset($_POST['fullname']) && 
+            isset($_POST['name']) && 
             isset($_POST['email']) && 
             isset($_POST['subject']) &&
             isset($_POST['reponse']) &&
@@ -17,7 +17,7 @@ class clsModifyContact
             $mod = clsContact::ModifyContact($_POST['contactId'], $_POST['reponse'], 'resolved');
 
             if ($mod) {
-                clsContact::SendMail($_POST['email'], $_POST['fullname'] , $_POST['subject'], $_POST['reponse']);
+                clsContact::SendMail($_POST['email'], $_POST['name'] , $_POST['subject'], $_POST['reponse']);
             }
             
             $_SESSION['ContactStatusMessage'] = ($mod) ? 

@@ -5,6 +5,7 @@ create procedure List_Contacts()
 begin 
 
     select 
+        contact_id,
         name, 
         email, 
         subject,

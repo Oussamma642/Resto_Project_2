@@ -2,7 +2,6 @@
 
 CREATE TABLE contacts (
     contact_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,  -- Référence à l'utilisateur qui a écrit le message
     email VARCHAR(150) NOT NULL,
     subject VARCHAR(255) NOT NULL,  -- Objet du message de contact
     message TEXT NOT NULL,
@@ -10,10 +9,17 @@ CREATE TABLE contacts (
     response text DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Date de création
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Dernière mise à jour
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );
 
 
+drop procedure if exists UpdateContactResponse;
+delimiter //
+
+create procedure UpdateContactResponse()
+
+delimiter ;
+
+-- ***************************************************************************
 DELIMITER //
 CREATE PROCEDURE UpdateContactResponse(
     IN p_contact_id INT,         -- ID du contact à mettre à jour

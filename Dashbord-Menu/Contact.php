@@ -190,12 +190,13 @@ if (isset($_POST['send']))
                     <div class="modal-body">
                         <form id="MessageContent" method="post">
                             <!-- Contact ID -->
-                            <input type="hidden" name="contactId" id="contactId">
-                            <!-- User ID -->
-                            <!-- <div class="form-group">
-                                <label for="usrId"><b>User ID:</b></label>
-                                <input type="text" readonly class="form-control" id="usrId" name="id">
-                            </div> -->
+                            <!-- <input type="text" readonly name="contactId" id="contactId"> -->
+
+                            <!-- Contact ID-->
+                            <div class="form-group">
+                                <label for="contactId"><b>Contact ID:</b></label>
+                                <input type="text" readonly class="form-control" id="contactId" name="id">
+                            </div>
                             <!-- User Full Name -->
                             <div class="form-group">
                                 <label for="fullname"><b>User Name:</b></label>
@@ -224,7 +225,7 @@ if (isset($_POST['send']))
                             </div>
 
                             <!-- Reponse -->
-                            <div class="form-group">
+                            - <div class="form-group">
                                 <label for="tArea" class="form-label">Your
                                     Message</label>
                                 <textarea class="form-control" name='reponse' id="tArea" rows="4"
