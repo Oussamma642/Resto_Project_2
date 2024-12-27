@@ -1,15 +1,12 @@
 <?php
 
 include_once ("Dashbord-Menu/Classes/ReservationClasses/clsAddNewRes.php");
-
 if (isset($_POST['reserver'])){
     clsAddNewReservation::AddNewReservation();
     // clsAddNewReservation::Test();    
 }
 
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
