@@ -67,7 +67,6 @@
                             <div class="dropdown-menu m-0">
                                 <a href="booking.php" class="dropdown-item active">Booking</a>
                                 <a href="team.php" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
                         <a href="contact.php" class="nav-item nav-link">Contact</a>
@@ -97,11 +96,13 @@
             <div class="row g-0">
                 <div class="col-md-6">
                     <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/watch?v=HcTQHw6Hk-Y" data-bs-target="#videoModal">
                             <span></span>
-                        </button>
+                        </button> -->
+                        <img src="resto.jpg" style="width:100%; height: 100%; object-fit: cover;" alt="">
                     </div>
+
                 </div>
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
