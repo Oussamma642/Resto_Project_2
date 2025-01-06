@@ -42,6 +42,9 @@ if (isset($_POST['reserver'])){
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!--Chatbox style -->
+    <link rel="stylesheet" href="css/chatboxstyle/chat.css">
 </head>
 
 <body>
@@ -202,6 +205,32 @@ if (isset($_POST['reserver'])){
             </div>
         </div>
         <!-- About End -->
+
+
+        <!---- frame chatbot  -->
+        <div class="chat-icon" id="chat-icon">💬</div>
+
+        <!-- Chatbot Iframe (hidden by default) -->
+        <iframe id="chatbot-frame"
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/12/19/20241212193309-5AWYXWSA.json"
+            title="Botpress Chatbot"></iframe>
+
+        <script>
+        // Get the icon and iframe elements
+        const chatIcon = document.getElementById('chat-icon');
+        const chatbotFrame = document.getElementById('chatbot-frame');
+
+        // Toggle the display of the chatbot iframe when the icon is clicked
+        chatIcon.addEventListener('click', () => {
+            if (chatbotFrame.style.display === 'none' || chatbotFrame.style.display === '') {
+                chatbotFrame.style.display = 'block'; // Show the chatbot iframe
+            } else {
+                chatbotFrame.style.display = 'none'; // Hide the chatbot iframe
+            }
+        });
+        </script>
+        <!-- end Chatbot Iframe -->
+
 
 
         <!-- Menu Start -->
@@ -806,7 +835,11 @@ if (isset($_POST['reserver'])){
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <div class="d-flex ">
+            <!-- <a href=" #" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+
+        </div>
+
     </div>
 
     <!-- JavaScript Libraries -->
