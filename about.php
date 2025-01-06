@@ -58,7 +58,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="/" class="nav-item nav-link ">Home</a>
+                        <a href="index.php" class="nav-item nav-link ">Home</a>
                         <a href="about.php" class="nav-item nav-link active">About</a>
                         <a href="service.php" class="nav-item nav-link">Service</a>
                         <a href="menu.php" class="nav-item nav-link">Menu</a>

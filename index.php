@@ -68,7 +68,7 @@ if (isset($_POST['reserver'])){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="/" class="nav-item nav-link active">Home</a>
+                        <a href="index.php" class="nav-item nav-link active">Home</a>
                         <a href="about.php" class="nav-item nav-link">About</a>
                         <a href="service.php" class="nav-item nav-link">Service</a>
                         <a href="menu.php" class="nav-item nav-link">Menu</a>
@@ -214,38 +214,6 @@ if (isset($_POST['reserver'])){
                     <h1 class="mb-5">Most Popular Items</h1>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
-                                href="#tab-1">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Breakfast</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill"
-                                href="#tab-2">
-                                <i class="fa fa-hamburger fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Launch</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
-                                href="#tab-3">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Lovely</small>
-                                    <h6 class="mt-n1 mb-0">Dinner</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
@@ -608,7 +576,7 @@ if (isset($_POST['reserver'])){
                 <div class="col-md-6">
                     <div class="video">
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/watch?v=HcTQHw6Hk-Y" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
