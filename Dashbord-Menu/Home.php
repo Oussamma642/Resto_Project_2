@@ -60,30 +60,11 @@ $currUser = $_SESSION['currUser'];
                 </li>
                 <li>
                     <a href="">
-                        <span class="ti-agenda"></span>
-                        <span><a href="Orders.php">Orders</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="ti-clipboard"></span>
-                        <span><a href="Dishses.php">Dishes Menu</a></span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
                         <span class="ti-user"></span>
                         <span><a href="Users.php">Users</a></span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="">
-                        <span class="ti-comment"></span>
-                        <span><a href="Comments.php">Comments</a></span>
-                    </a>
-                </li>
                 <li>
                     <a href="">
                         <span class="ti-email"></span>
@@ -110,11 +91,12 @@ $currUser = $_SESSION['currUser'];
 
     <div class="main-content">
 
-        <main>
-            <div class='comingsoon'>
-                <h1>Welcome <?=$currUser->getLastName() . ' ' . $currUser->getFirstName()?></h1>
-            </div>
-        </main>
+
+        <div class='comingsoon'>
+            <h1>Welcome <br><span
+                    style="margin-left:-140px"><?=$currUser->getLastName() . ' ' . $currUser->getFirstName()?></span>
+            </h1>
+        </div>
 
     </div>
 

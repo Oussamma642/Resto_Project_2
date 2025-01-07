@@ -111,6 +111,7 @@ if (isset($_SESSION['Message'])) {
             <label for="sidebar-toggle" class="ti-menu-alt"></label>
         </div>
 
+
         <div class="sidebar-menu">
             <ul>
                 <li>
@@ -127,30 +128,11 @@ if (isset($_SESSION['Message'])) {
                 </li>
                 <li>
                     <a href="">
-                        <span class="ti-agenda"></span>
-                        <span><a href="Orders.php">Orders</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="ti-clipboard"></span>
-                        <span><a href="Dishses.php">Dishes Menu</a></span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
                         <span class="ti-user"></span>
                         <span><a href="Users.php">Users</a></span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="">
-                        <span class="ti-comment"></span>
-                        <span><a href="Comments.php">Comments</a></span>
-                    </a>
-                </li>
                 <li>
                     <a href="">
                         <span class="ti-email"></span>
@@ -161,7 +143,7 @@ if (isset($_SESSION['Message'])) {
                 <li>
                     <a href="">
                         <span class="ti-time"></span>
-                        <span><a href="OpClose.php">Opening/Closing Time</a></span>
+                        <span><a href="OpClose.php">Ouverture/Fermeture</a></span>
                     </a>
                 </li>
                 <li>
@@ -172,6 +154,8 @@ if (isset($_SESSION['Message'])) {
                 </li>
             </ul>
         </div>
+
+
     </div>
 
     <div class="main-content">

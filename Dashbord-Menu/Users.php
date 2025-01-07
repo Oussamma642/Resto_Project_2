@@ -113,30 +113,11 @@ if (isset($_SESSION['updateUserStatus']))
                 </li>
                 <li>
                     <a href="">
-                        <span class="ti-agenda"></span>
-                        <span><a href="Orders.php">Orders</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="ti-clipboard"></span>
-                        <span><a href="Dishses.php">Dishes Menu</a></span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
                         <span class="ti-user"></span>
                         <span><a href="Users.php">Users</a></span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="">
-                        <span class="ti-comment"></span>
-                        <span><a href="Comments.php">Comments</a></span>
-                    </a>
-                </li>
                 <li>
                     <a href="">
                         <span class="ti-email"></span>
@@ -147,7 +128,7 @@ if (isset($_SESSION['updateUserStatus']))
                 <li>
                     <a href="">
                         <span class="ti-time"></span>
-                        <span><a href="OpClose.php">Opening/Closing Time</a></span>
+                        <span><a href="OpClose.php">Ouverture/Fermeture</a></span>
                     </a>
                 </li>
                 <li>
@@ -158,6 +139,7 @@ if (isset($_SESSION['updateUserStatus']))
                 </li>
             </ul>
         </div>
+
     </div>
 
 
