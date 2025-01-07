@@ -16,7 +16,8 @@ class clsModifyContact
         ) 
         
         {
-            $mod = clsContact::ModifyContact($_POST['contactId'], $_POST['reponse'], 'resolved');
+            $cnt_id = ($_POST['contactId']);
+            $mod = clsContact::ModifyContact($cnt_id, $_POST['reponse'],$_POST['email'] , 'resolved');
             if ($mod) {
                 clsContact::SendMail($_POST['email'], $_POST['name'] , $_POST['subject'], $_POST['reponse']);
                 return true;

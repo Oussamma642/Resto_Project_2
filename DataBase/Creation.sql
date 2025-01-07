@@ -100,7 +100,7 @@ CREATE TABLE order_items (
 
 CREATE TABLE contacts (
     contact_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,  -- Référence à l'utilisateur qui a écrit le message
+    name VARCHAR(50),
     email VARCHAR(150) NOT NULL,
     subject VARCHAR(255) NOT NULL,  -- Objet du message de contact
     message TEXT NOT NULL,
@@ -110,6 +110,8 @@ CREATE TABLE contacts (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Dernière mise à jour
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );
+
+
 
 INSERT INTO contacts (user_id, email, subject, message) 
 VALUES (32, '@gmail.com', 'Subject', 'Bonjour bro how are you doing');

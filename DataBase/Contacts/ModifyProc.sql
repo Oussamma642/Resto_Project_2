@@ -38,6 +38,7 @@ DELIMITER //
 CREATE PROCEDURE UpdateContactResponse(
     IN p_contact_id INT,         -- ID du contact à mettre à jour
     IN p_admin_response TEXT,    -- Réponse de l'admin
+    IN p_email VARCHAR(100),
     IN p_status ENUM('pending', 'resolved', 'archived') -- Nouveau statut
 )
 BEGIN
@@ -48,7 +49,7 @@ BEGIN
         status = p_status,           -- Mise à jour du statut
         updated_at = CURRENT_TIMESTAMP -- Mise à jour de l'horodatage
     WHERE 
-        contact_id = p_contact_id;   -- Filtrer par ID de contact
+        contact_id = p_contact_id and email=p_email;   -- Filtrer par ID de contact
 
     -- Vérifier si l'enregistrement a été mis à jour
     IF ROW_COUNT() = 0 THEN

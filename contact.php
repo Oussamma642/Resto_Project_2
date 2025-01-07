@@ -3,8 +3,6 @@
 include_once ("Dashbord-Menu/Classes/ContactsClasses/clsContact.php");
 
 if (isset($_POST['send'])){
-
-
     if (
         isset($_POST['nameU'])&&
         isset($_POST['email']) &&
